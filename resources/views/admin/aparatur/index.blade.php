@@ -17,7 +17,7 @@
         @endif
 
         <a href="{{ route('admin.aparatur.create') }}" class="btn btn-primary mb-3">Tambah Aparatur</a>
-
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary mb-3">Kembali</a>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -53,5 +53,6 @@
 
         {{ $aparatur->links() }}
     </div>
+
 </body>
 </html>

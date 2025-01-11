@@ -13,6 +13,7 @@ use App\Http\Controllers\AparaturController;
 
 // Halaman Profil Desa (umum)
 Route::get('/', [ProfileController::class, 'index']);
+Route::get('/', [ProfileController::class, 'index'])->name('profile.index');
 
 // Route untuk Login, Logout, dan otentikasi admin
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

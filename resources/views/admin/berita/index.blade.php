@@ -9,10 +9,13 @@
 </head>
 <body class="container my-4">
     <h1 class="mb-4">Daftar Berita</h1>
+    
     <div class="d-flex justify-content-between mb-3">
-        <a href="{{ route('admin.berita.create') }}" class="btn btn-primary">Tambah Berita</a>
+        <a href="{{ route('admin.berita.create') }}" class="btn btn-primary mb-3">Tambah Berita</a>
+        <!-- <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Tambah Berita</a> -->
+        <!-- <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">Kembali</a> -->
     </div>
-
+    <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary mb-3">Kembali</a>
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>

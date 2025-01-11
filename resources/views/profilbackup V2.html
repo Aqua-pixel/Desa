@@ -430,49 +430,49 @@
     <main>
     <div id="berita" class="container my-4">
     <!-- <h2 class="text-center mb-4">Informasi Terbaru dan Publikasi Kegiatan</h2> -->
-        <h2 class="text-center mb-4 text-primary">Informasi Terbaru</h2>
-        <div class="d-flex overflow-auto gap-3">
-            @forelse ($beritas as $berita)
-                <!-- Card Berita -->
-                <div class="card flex-shrink-0" style="width: 18rem;">
-                    <img src="{{ asset('storage/' . $berita->foto) }}" alt="{{ $berita->judul }}" class="card-img-top" style="height: 150px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $berita->judul }}</h5>
-                        <p class="card-text text-truncate" title="{{ $berita->konten }}">
-                            {{ Str::limit($berita->konten, 150) }}
-                        </p>
-                        <p class="text-muted"><small>{{ $berita->tanggal }}</small></p>
-                        <!-- Tombol Baca Selengkapnya -->
-                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalBerita{{ $berita->id }}">Baca Selengkapnya</a>
-                    </div>
+    <h2 class="text-center mb-4 text-primary">Informasi Terbaru</h2>
+    <div class="d-flex overflow-auto gap-3">
+        @forelse ($beritas as $berita)
+            <!-- Card Berita -->
+            <div class="card flex-shrink-0" style="width: 18rem;">
+                <img src="{{ asset('storage/' . $berita->foto) }}" alt="{{ $berita->judul }}" class="card-img-top" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $berita->judul }}</h5>
+                    <p class="card-text text-truncate" title="{{ $berita->konten }}">
+                        {{ Str::limit($berita->konten, 150) }}
+                    </p>
+                    <p class="text-muted"><small>{{ $berita->tanggal }}</small></p>
+                    <!-- Tombol Baca Selengkapnya -->
+                    <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalBerita{{ $berita->id }}">Baca Selengkapnya</a>
                 </div>
+            </div>
 
-                <!-- Modal Berita dengan Scroll -->
-                <div class="modal fade overflow-hidden" id="modalBerita{{ $berita->id }}" tabindex="-1" aria-labelledby="modalLabel{{ $berita->id }}" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabel{{ $berita->id }}">{{ $berita->judul }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="{{ asset('storage/' . $berita->foto) }}" alt="{{ $berita->judul }}" class="img-fluid mb-3">
-                                <p>{{ $berita->konten }}</p>
-                                <p class="text-muted"><small>{{ $berita->tanggal }}</small></p>
-                            </div>
+            <!-- Modal Berita dengan Scroll -->
+            <div class="modal fade overflow-hidden" id="modalBerita{{ $berita->id }}" tabindex="-1" aria-labelledby="modalLabel{{ $berita->id }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel{{ $berita->id }}">{{ $berita->judul }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ asset('storage/' . $berita->foto) }}" alt="{{ $berita->judul }}" class="img-fluid mb-3">
+                            <p>{{ $berita->konten }}</p>
+                            <p class="text-muted"><small>{{ $berita->tanggal }}</small></p>
                         </div>
                     </div>
                 </div>
-            @empty
-                <p class="text-muted">Tidak ada berita terbaru.</p>
-            @endforelse
-        </div>
-
-        <!-- Pagination -->
-        <div class="mt-3 d-flex justify-content-center">
-            {{ $beritas->links('pagination::bootstrap-4') }}
-        </div>
+            </div>
+        @empty
+            <p class="text-muted">Tidak ada berita terbaru.</p>
+        @endforelse
     </div>
+
+    <!-- Pagination -->
+    <div class="mt-3 d-flex justify-content-center">
+        {{ $beritas->links('pagination::bootstrap-4') }}
+    </div>
+</div>
 
     </div>
         <div id="sejarah" class="container-fluid my-5 px-5">
@@ -501,7 +501,9 @@
                                 <path d="M12 16L6 10h12l-6 6z" fill="#333" />
                             </svg>
                         </button>
+                        
                     </div>
+
                 </div>
             @endforeach
         </div>
@@ -683,7 +685,6 @@
             </div>
         </div>
     </div>
-
 
 
     <div id="peninggalan" class="container my-4">

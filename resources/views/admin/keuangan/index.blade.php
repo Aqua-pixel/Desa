@@ -10,7 +10,8 @@
     <div class="container mt-5">
         <h1 class="mb-4">Data Keuangan Desa</h1>
         <div class="mb-3">
-            <a href="{{ route('admin.keuangan.create') }}" class="btn btn-primary">Tambah Data</a>
+            <a href="{{ route('admin.keuangan.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary mb-3">Kembali</a>
         </div>
         <div class="table-responsive">
             <table class="table table-bordered table-hover">

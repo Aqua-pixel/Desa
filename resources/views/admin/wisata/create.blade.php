@@ -74,6 +74,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('admin.wisata.index') }}" class="btn btn-secondary">Kembali</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

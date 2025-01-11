@@ -10,7 +10,8 @@
     <div class="container my-5">
         <h1 class="mb-4">Data Geografis</h1>
         <a href="{{ route('admin.geografis.create') }}" class="btn btn-primary mb-3">Tambah Geografis</a>
-
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary mb-3">Kembali</a>
+        <!-- <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">Kembali</a> -->
         @if(session('success'))
             <div class="alert alert-success" role="alert">
                 {{ session('success') }}

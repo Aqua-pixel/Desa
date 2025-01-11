@@ -48,6 +48,7 @@
 
             <div class="text-end">
                 <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                <a href="{{ route('admin.berita.index') }}" class="btn btn-secondary">Kembali</a>
             </div>
         </form>
     </div>

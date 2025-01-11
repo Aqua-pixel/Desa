@@ -40,6 +40,7 @@
                 <input type="date" id="tanggal" name="tanggal" class="form-control" value="{{ $keuangan->tanggal ?? '' }}" required>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('admin.keuangan.index') }}" class="btn btn-secondary">Kembali</a>
         </form>
     </div>
 
